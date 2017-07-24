@@ -1,0 +1,831 @@
+<html>
+<head>
+<title>python_tutorial_es.ipynb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(169,183,198); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+python_tutorial_es.ipynb</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">{ 
+ &quot;cells&quot;: [ 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: { 
+    &quot;collapsed&quot;: true 
+   }, 
+   &quot;source&quot;: [ 
+    &quot;# Tutorial de Python 3 para programación en oTree\n&quot;, 
+    &quot;## David Klinowski&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Documento adaptado de:\n&quot;, 
+    &quot;\n&quot;, 
+    &quot;[oTree's Python tutorial](http://otree.readthedocs.io/en/latest/python.html) \n&quot;, 
+    &quot;\n&quot;, 
+    &quot;[Learn Python in Y minutes](https://learnxinyminutes.com/docs/python3/)\n&quot;, 
+    &quot;\n&quot;, 
+    &quot;Y distribuido bajo la misma [licencia](https://creativecommons.org/licenses/by-sa/3.0/deed.en_US).&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;###### Tipos de data y operadores:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 10, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;3&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 10, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;3&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 11, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;2&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 11, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 + 1&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 12, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;7&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 12, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;8 - 1&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 13, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;20&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 13, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;10 * 2&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;División decimal:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 20, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;7.0&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 20, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;35 / 5&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;División entera:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 19, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;7&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 19, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;35 // 5&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Paréntesis para establecer precedencia de operaciones:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 21, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;8&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 21, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;(1 + 3) * 2&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Datos Booleanos y operadores:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 17, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;False&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 17, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;True and False&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 18, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 18, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;True or False&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 22, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;False&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 22, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;not True&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 23, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 23, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;not False&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 24, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 24, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 == 1&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 25, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;False&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 25, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 == 2&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 26, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;False&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 26, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 != 1&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 27, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 27, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 != 2&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 28, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 28, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 &lt; 10&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 29, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;False&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 29, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 &gt; 10&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 30, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 30, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;2 &gt;= 2&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 31, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;True&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 31, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 &lt; 2 &lt; 3&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 32, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;False&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 32, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;1 &lt; 2 &gt; 3&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Cadenas de caracteres se crean con ' o \&quot;\&quot;:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 33, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;'Estos son caracteres.'&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 33, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;'Estos son caracteres.'&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 34, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;'Estos también son caracteres.'&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 34, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;\&quot;Estos también son caracteres.\&quot;&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Las cadenas de caracteres se pueden sumar:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 35, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;'Hola, ¿qué tal?'&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 35, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;'Hola, ' + '¿qué tal?'&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Las cadenas de caracteres pueden ser tratadas como listas de caracteres y extraérseles elementos:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 36, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;'E'&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 36, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;'Estos son caracteres.'[0]&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;El método format permite alterar una cadena de caracteres:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 42, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;'Un triángulo tiene 3 lados'&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 42, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;'Un triángulo tiene {} lados'.format(3)&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;La instrucción para imprimir en Python es \&quot;print\&quot;:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 44, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;name&quot;: &quot;stdout&quot;, 
+     &quot;output_type&quot;: &quot;stream&quot;, 
+     &quot;text&quot;: [ 
+      &quot;Soy Python. Mucho gusto.\n&quot; 
+     ] 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;print('Soy Python. Mucho gusto.')&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;###### Variables:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;No hace falta declarar variables antes de asignarles valores:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 47, 
+   &quot;metadata&quot;: { 
+    &quot;collapsed&quot;: true 
+   }, 
+   &quot;outputs&quot;: [], 
+   &quot;source&quot;: [ 
+    &quot;mi_var = 5  # la convención de nombres de variables es todo en minúsucula y con pisos \&quot;_\&quot;&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 46, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;5&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 46, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;mi_var&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Para aumentar y disminuir variables:&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 49, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;0&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 49, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;x = 0\n&quot;, 
+    &quot;x&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 50, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;1&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 50, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;x += 1\n&quot;, 
+    &quot;x&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 51, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;-1&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 51, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;x -= 2\n&quot;, 
+    &quot;x&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;markdown&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [ 
+    &quot;Las variables tipo list manejas sequencias de datos y se definen con braquets [ ]: &quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 53, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;[]&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 53, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;mi_lista = []\n&quot;, 
+    &quot;mi_lista&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: 1, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [ 
+    { 
+     &quot;data&quot;: { 
+      &quot;text/plain&quot;: [ 
+       &quot;[4, 5, 6]&quot; 
+      ] 
+     }, 
+     &quot;execution_count&quot;: 1, 
+     &quot;metadata&quot;: {}, 
+     &quot;output_type&quot;: &quot;execute_result&quot; 
+    } 
+   ], 
+   &quot;source&quot;: [ 
+    &quot;otra_lista = [4, 5, 6]\n&quot;, 
+    &quot;otra_lista&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;code&quot;, 
+   &quot;execution_count&quot;: null, 
+   &quot;metadata&quot;: {}, 
+   &quot;outputs&quot;: [], 
+   &quot;source&quot;: [ 
+    &quot;&quot; 
+   ] 
+  }, 
+  { 
+   &quot;cell_type&quot;: &quot;raw&quot;, 
+   &quot;metadata&quot;: {}, 
+   &quot;source&quot;: [] 
+  } 
+ ], 
+ &quot;metadata&quot;: { 
+  &quot;kernelspec&quot;: { 
+   &quot;display_name&quot;: &quot;Python 3&quot;, 
+   &quot;language&quot;: &quot;python&quot;, 
+   &quot;name&quot;: &quot;python3&quot; 
+  }, 
+  &quot;language_info&quot;: { 
+   &quot;codemirror_mode&quot;: { 
+    &quot;name&quot;: &quot;ipython&quot;, 
+    &quot;version&quot;: 3.0 
+   }, 
+   &quot;file_extension&quot;: &quot;.py&quot;, 
+   &quot;mimetype&quot;: &quot;text/x-python&quot;, 
+   &quot;name&quot;: &quot;python&quot;, 
+   &quot;nbconvert_exporter&quot;: &quot;python&quot;, 
+   &quot;pygments_lexer&quot;: &quot;ipython3&quot;, 
+   &quot;version&quot;: &quot;3.6.1&quot; 
+  } 
+ }, 
+ &quot;nbformat&quot;: 4, 
+ &quot;nbformat_minor&quot;: 0 
+}</span></pre>
+</body>
+</html>
